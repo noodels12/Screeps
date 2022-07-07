@@ -1,0 +1,36 @@
+def class poopdeck():
+	location = \\UNO-1483G-434AE\Log\
+	zplcode = ()
+	
+
+	def getorder():
+		order = int(input("Enter an order: "))
+		odate = input(("Enter date in YYYY-DD-MM format ONLY:")) 
+		if order.isnumeric():
+			if len(order) !> 8:
+				continue
+		else:
+			raise ValueError:
+				print("INVALID INPUT PLEASE TRY AGAIN")
+				break
+	def deck(order, odate):
+		LP = str(int("99999999" - order))
+		matcher = str("DATA	" + LP)
+		file1 = os.path.join(location, "TNT-Module-1-" + odate + ".txt")
+		with open1 = open(file1, "r"):
+			for words in file1:
+				zplcode = re.match(fr'{matcher}*[^XA*^XZ])
+		open1.close()
+	def poop(zplcode):
+		url = 'http://api.labelary.com/v1/printers/8dpmm/labels/4x6/0/'
+		files = {'file' : zpl}
+		headers = {'Accept' : 'application/pdf'} # omit this line to get PNG images back
+		response = requests.post(url, headers = headers, files = files, stream = True)
+
+		if response.status_code == 200:
+    			response.raw.decode_content = True
+    			with open('label.pdf', 'wb') as out_file: # change file name for PNG images
+        			shutil.copyfileobj(response.raw, out_file)
+				shutil
+		else:
+    			print('Error: ' + response.text)
